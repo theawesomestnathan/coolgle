@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <title> Coolgle: Login </title>
+
+    <style> [x-cloak] { display: none; } </style>
+  </head>
+  <body class="dark:bg-slate-800">
+    <form action="/register" method="post">
+      <h1 
+      class="text-7xl text-sky-400/75 flex items-center justify-center mt-52"
+      >
+        coolgle
+      </h1>
+  
+      <br>
+  
+      <p class="text-white flex items-center justify-center"> 
+        The cooler Google.
+      </p>        
+  
+      <br>
+  
+      <div x-data="{ section: 'username' }">
+        <div x-show="section === 'username'">
+          <h3 
+            class="text-3xl text-sky-400/75 flex items-center justify-center"
+          > 
+            Type in your username. 
+          </h3>
+        
+          <br>
+        
+          <div class="flex items-center justify-center">
+            <input 
+              type="text" 
+              name="username" 
+              class="h-16 w-2/4 rounded-lg pl-4 focus:!outline-none" 
+              placeholder="💬 Type in your username, please."
+            >
+          </div>
+        
+          <br>
+          <br>
+        
+          <div class="flex items-center justify-center">
+            <button 
+              @click.prevent="section = 'password'" 
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 
+              px-4 rounded"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+  
+        <div x-show="section === 'password'" x-cloak>
+          <h3 
+            class="text-3xl text-sky-400/75 flex items-center justify-center"
+          > 
+            Type in your password. 
+          </h3>
+        
+          <br>
+        
+          <div class="flex items-center justify-center">
+            <input 
+              type="password" 
+              name="password"
+              class="h-16 w-2/4 rounded-lg pl-4 focus:!outline-none" 
+              placeholder="🔑 Type in your password, please."
+            >
+          </div>
+        
+          <br>
+          <br>
+        
+          <div class="flex items-center justify-center">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold 
+              py-2 px-4 rounded"
+            > 
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <br>
+
+      <a 
+        href="/login"
+        class="flex items-center justify-center text-sky-400/100
+        underline"
+      >
+        Have an account? Click here to login.
+      </a>
+
+    </form>
+  </body>
+</html>
