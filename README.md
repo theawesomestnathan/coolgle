@@ -15,7 +15,7 @@ Github Pages sadly doesn't support backend, so you'll have to manually install a
 
 ## Backstory
 
-I came across this video on Youtube about making a better Google. I thought: "Oh, that's easy! I can totally do that!". Initially, I the backend with Go, specifically, with **Go Fiber**  as the full-stack framework.
+I came across this video on Youtube about making a better Google. I thought: "Oh, that's easy! I can totally do that!". Initially, I made the backend with Go, specifically, with **Go Fiber**  as the full-stack framework.
 
 It was easy, and *that was the reason I didn't like it.* You see, as Terry Davis said: *"An idiot admires simplicity, a genius admires complexity."* So, since I'm an idiot, I decided to hop between many Javascript backend frameworks like a teenager deciding what they want to be in life.
 
